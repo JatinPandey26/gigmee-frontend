@@ -23,7 +23,7 @@ const GigCard = ({ item }) => {
                 <div className="details">
                     {
                         isLoading ? "...Loading": error ? "Something went wrong"  : <div className="info">
-                            <img src={data.image || '/assets/Images/noavtar.png'} alt="" />
+                            <img src={data.img || '/assets/Images/noavtar.png'} alt="" />
                             <h5>{data.username}</h5>
                         </div>
                     }
