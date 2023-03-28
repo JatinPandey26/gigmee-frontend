@@ -22,15 +22,15 @@ const GigCard = ({ item }) => {
                 </div>
                 <div className="details">
                     {
-                        isLoading ? "...Loading": error ? "Something went wrong"  : <div className="info">
+                        isLoading ? "...Loading" : error ? "Something went wrong" : <div className="info">
                             <img src={data.img || '/assets/Images/noavtar.png'} alt="" />
                             <h5>{data.username}</h5>
                         </div>
                     }
                     <p>{item.title}</p>
                     <p>{item.desc?.substring(0, 100)}...</p>
-                    <div className='star'><img src="/assets/Images/star.png" alt="" /> 
-                    <span>{!isNaN(item.totalStars / item.starNumber) && Math.floor(item.totalStars / item.starNumber)}</span></div>
+                    <div className='star'><img src="/assets/Images/star.png" alt="" />
+                        <span>{!isNaN(item.totalStars / item.starNumber) ? Math.floor(item.totalStars / item.starNumber) : 0}</span></div>
                 </div>
                 <div className="rating">
                     <div className="left">
