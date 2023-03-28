@@ -15,7 +15,7 @@ const Orders = () => {
       })
 
   });
-  console.log(isLoading);
+  console.log(data);
 
   return (
     <div className='orders'>
