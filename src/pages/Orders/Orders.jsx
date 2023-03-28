@@ -10,7 +10,7 @@ const Orders = () => {
   const { isLoading, error, data } = useQuery({
     queryKey: ["orders"],
     queryFn: () =>
-      newRequest.get('/orders', { withCredentials: true }).then(res => { return res.data }).catch(err => {
+      newRequest.post('/orders', {}, { withCredentials: true }).then(res => { return res.data }).catch(err => {
         console.log(err);
       })
 
