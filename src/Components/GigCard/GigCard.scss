@@ -4,6 +4,8 @@
     border: 1px solid #dbdbda;
     margin-bottom: 1rem ;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
     &:hover .img img{
         scale: 1.1;
     }
@@ -73,7 +75,9 @@
         display: flex;
         padding: 1rem 1rem;
         align-items: center;
-        
+        height: fit-content;
+        padding: 1rem;
+        align-items: flex-end;
         .left{
             display: flex;
             align-items: center;
