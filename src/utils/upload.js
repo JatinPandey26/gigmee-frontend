@@ -8,7 +8,7 @@ export const upload = async (file) => {
 
   try {
     const res = await axios.post(import.meta.env.VITE_UPLOAD_URL, data);
-
+ 
     const { url } = res.data;
     return url;
   } catch (error) {
