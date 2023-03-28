@@ -15,7 +15,7 @@ const Reviews = ({ review }) => {
     return (
         <div className="review">
             <div className="user">
-                <img src={data?.img} alt="" />
+                <img src={data?.img || '/assets/Images/noavtar.png'} alt="" />
                 <div className="details">
                     <h6>{data?.username}</h6>
                     <div className='location'>
