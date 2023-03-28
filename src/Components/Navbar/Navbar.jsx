@@ -52,7 +52,7 @@ const Navbar = () => {
                 </button>
                 <div className={navbarOpen ? 'menu open' : 'menu'}>
                     <span>Buisness</span>
-                    <span>Explore</span>
+                    <span><Link className='link' to='/gigs'>Explore</Link></span>
                     <span>English</span>
                     {!currentUser?.isSeller && <span>Become a seller</span>}
                     {!currentUser && <Link to='/login' className='link'><span>Sign in</span></Link>}
