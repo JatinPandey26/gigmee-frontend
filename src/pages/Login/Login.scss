@@ -1,0 +1,40 @@
+.login {
+    form {
+        display: flex;
+        flex-direction: column;
+        margin: 5rem auto;
+        width: fit-content;
+        gap: 1rem;
+
+        input,
+        button {
+            width: 20rem;
+            height: 2.5rem;
+            font-size: 1rem;
+        }
+
+        h1 {
+            align-self: center;
+        }
+
+        input{
+            outline-color: #684b8b;
+            padding: 0 5px;
+        }
+
+        button {
+            padding: 8px 10px;
+            color: white;
+            background-color: #80679e;
+            border: transparent;
+            outline: none;
+            border-radius: 3px;
+            font-size: 12px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #684b8b;
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+.category-card{
+    display: flex;
+    flex-direction: column;
+    height:20rem;
+    width: 15rem;
+    background-color: antiquewhite;
+    position: relative;
+    overflow: hidden;
+    &:hover  img{
+        scale: 1.1;
+    }
+
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: 0.3s all ease-in-out;
+    }
+    .desc{
+        position: absolute;
+        top: 1rem;
+        font-size: 0.9rem;
+        left: 1rem;
+        color: rgb(255, 255, 255);
+    }
+    .title{
+        position: absolute;
+        top : 2.5rem;
+        font-weight : bold ;
+        font-size: 1.1rem;
+        left: 1rem;
+        color: rgb(255, 255, 255);
+    }
+}

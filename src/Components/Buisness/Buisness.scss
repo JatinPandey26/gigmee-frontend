@@ -1,0 +1,59 @@
+.features.dark{
+    
+    background-color: #8c74fb;
+    
+    .container{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        min-height: 70vh;
+        .left{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 4rem 0;
+            gap: 1rem;
+            h1{
+                font-size: 1.5rem;
+                color: white;
+            }
+            .title{
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                font-weight: 700;
+                color: white;
+            }
+            p{
+                color: white;
+            }
+            button{
+                width: fit-content;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+                border: transparent;
+                background-color: #372971;
+                color: white;
+            }
+        }
+
+        .right{
+            width: 50%;
+            display: flex;
+            
+            align-items: center;
+            img{
+                height: 70%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        @media screen and (max-width: 650px) {
+            flex-direction: column;
+            .left , .right {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+tr {
+
+
+
+
+
+    th {
+        text-align: start;
+        padding: 1rem 0;
+    }
+
+    td {
+
+        padding: 1.5rem 0;
+
+        &:nth-of-type(1) {
+            width: 10%;
+
+            font-weight: bold;
+            padding-left: 10px;
+        }
+
+        &:nth-of-type(2) {
+            width: 70%;
+        }
+
+        &:nth-of-type(4) {
+            width: 10%;
+        }
+
+        &:nth-of-type(4) {
+            width: 10%;
+
+            button {
+                display: none;
+            }
+        }
+
+
+    }
+
+    &.active {
+        background-color: rgb(220, 244, 220);
+
+        td {
+            button {
+                display: block;
+                padding: 8px 10px;
+                color: white;
+                background-color: #80679e;
+                border: transparent;
+                outline: none;
+                border-radius: 3px;
+                font-size: 12px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #684b8b;
+                }
+            }
+        }
+    }
+}

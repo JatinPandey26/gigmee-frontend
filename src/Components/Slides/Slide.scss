@@ -1,0 +1,21 @@
+.slide {
+    position: relative;
+    margin:  5rem 0;
+    .container {
+        width: 80%;
+        margin: auto;
+        gap: 2rem;
+        .carousel-prev,.carousel-next {
+            
+            height: 2.5rem;
+            width: 2.5rem;
+            border-radius: 50%;
+            background-color: rgb(233, 233, 233);
+            padding: 10px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+}

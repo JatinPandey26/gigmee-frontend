@@ -1,0 +1,168 @@
+.navbar {
+    background-color: #4c3444;
+    color: white;
+    transition: 0.1s ease-in-out;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    &.active {
+        background-color: white;
+        color: black;
+    }
+
+
+
+    >.container {
+
+        width: 80%;
+        display: flex;
+        margin: auto;
+        padding: 10px 0;
+        align-items: center;
+        position: relative;
+        justify-content: space-between;
+       
+
+        >.logo {
+            width: 20%;
+
+            .text {
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+
+            .dot {
+                font-size: 2rem;
+                font-weight: 700;
+                line-height: 1.5rem;
+                color: #80679e;
+            }
+        }
+
+        >button {
+            background-color: transparent;
+            outline: none;
+            border: none;
+            display: none;
+            @media screen and (max-width:700px) {
+                display: block;
+            }
+            img {
+                height: 100%;
+                width: 16px;
+                object-fit: contain;
+
+                &:hover {
+                    border: 1px solid gray;
+                }
+            }
+        }
+
+        >.menu {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            >&.open {
+               display: none;
+            }
+
+            @media screen and (max-width:700px) {
+                position: absolute;
+                width: max-content;
+                flex-direction: column;
+                top: 2rem;
+                gap: 1rem;
+                right: 0;
+                background-color: white;
+                border: 2px solid;
+                padding: 1rem;
+                color: black;
+            }
+
+            >span {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 0.9;
+                font-weight: 500;
+            }
+
+            button {
+                border: 1px solid;
+                border-radius: 2px;
+                width: 3rem;
+                padding: 0.3rem;
+                background-color: transparent;
+                color: rgb(19, 18, 18);
+                font-size: 0.9;
+                font-weight: 700;
+
+                &.active {
+                    color: black;
+                }
+
+                &:hover {
+                    border: none;
+                    background-color: #80679e;
+                }
+            }
+
+            >.user {
+                display: flex;
+                align-items: center;
+                gap: 0.8rem;
+                position: relative;
+                cursor: pointer;
+
+                img {
+                    height: 32px;
+                    width: 32px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                .options {
+                    background-color: white;
+                    padding: 5px;
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    border: 1px solid lightgray;
+                    font-size: 0.8rem;
+                    color: gray;
+                    // bottom: -7rem;
+                    top: 110%;
+                    border-radius: 3px;
+                    width: 200%;
+                    right: 0;
+                    font-weight: 300;
+
+                }
+            }
+        }
+
+
+    }
+
+
+    .lower-menu-wrapper {
+        margin-top: 1px solid;
+        background-color: white;
+        transition: 0.1s ease-in-out;
+        padding: 3px 0;
+        border-bottom: 1px solid rgb(213, 212, 212);
+        border-top: 1px solid rgb(213, 212, 212);
+
+        >.lower-menu {
+            padding: 4px 0;
+            font-weight: 300;
+            font-size: 0.9rem;
+            display: flex;
+            width: 80%;
+            margin: auto;
+            justify-content: space-between;
+        }
+    }
+}

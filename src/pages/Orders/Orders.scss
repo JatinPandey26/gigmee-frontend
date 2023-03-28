@@ -1,0 +1,71 @@
+.orders {
+    .container {
+        width: 80%;
+        margin: auto;
+        margin-top: 2rem;
+
+        .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            tr {
+
+                &:nth-child(even) {
+                    background-color: #dfd2ef;
+                }
+
+                th {
+                    text-align: start;
+                    padding: 10px 0;
+                }
+
+                td {
+                    padding: 10px 0;
+
+                    &:nth-of-type(1) {
+                        width: 10%;
+
+                        img {
+
+                            height: 2rem;
+                            object-fit: cover;
+                        }
+                    }
+
+                    &:nth-of-type(2) {
+                        width: 30%;
+                    }
+
+                    &:nth-of-type(4) {
+                        width: 30%;
+                    }
+
+                    &:nth-of-type(4) {
+                        width: 30%;
+                    }
+
+                    &:nth-of-type(5) {
+                        img {
+                            height: 1.5rem;
+                            object-fit: cover;
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+
+
+                }
+            }
+        }
+    }
+}

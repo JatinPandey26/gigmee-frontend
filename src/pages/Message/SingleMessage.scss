@@ -1,0 +1,33 @@
+.message-box {
+    display: flex;
+    gap: 1rem;
+    width: 50%;
+
+    img {
+        height: 40px;
+        width: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .text {
+        width: 80%;
+        // word-break: break-all;
+        background-color: rgba(212, 211, 211, 0.338);
+        padding: 0.5rem;
+        border-radius: 0 10px 10px 10px;
+    }
+
+    &.owner {
+        align-self: flex-end;
+        flex-direction: row-reverse;
+
+        .text {
+            width: 80%;
+            // word-break: break-all;
+            background-color: rgba(169, 170, 208, 0.746);
+            padding: 0.5rem;
+            border-radius: 10px 0px 10px 10px;
+        }
+    }
+}
