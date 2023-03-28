@@ -27,7 +27,7 @@ const GigCard = ({ item }) => {
                             <h5>{data.username}</h5>
                         </div>
                     }
-                    <p>{item.title}</p>
+                    <p style={{ fontWeight: 'bold' }}>{item.title?.substring(0, 20)}...</p>
                     <p>{item.desc?.substring(0, 50)}...</p>
                     <div className='star'><img src="/assets/Images/star.png" alt="" />
                         <span>{!isNaN(item.totalStars / item.starNumber) ? Math.floor(item.totalStars / item.starNumber) : 0}</span></div>
