@@ -15,7 +15,7 @@ const Reviews = ({ review }) => {
     return (
         <div className="review">
             <div className="user">
-                <img src="https://images.pexels.com/photos/1771383/pexels-photo-1771383.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" />
+                <img src={data?.img} alt="" />
                 <div className="details">
                     <h6>{data?.username}</h6>
                     <div className='location'>
@@ -35,7 +35,7 @@ const Reviews = ({ review }) => {
                         return <img src="/assets/Images/star.png" key={i} alt="" />
                     })
                 }
-                <span>{review.star }</span>
+                <span>{review.star}</span>
             </div>
 
             <p>
