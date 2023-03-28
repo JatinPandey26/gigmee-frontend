@@ -22,7 +22,7 @@ const Order = ({ order }) => {
             <td>
                 <img src={order.image} alt="" />
             </td>
-            <td>{order.title}</td>
+            <td>{order.title?.substring(0, 100)}...</td>
             <td>{order.price}</td>
             {isLoading ? "Loading..." : <td>{data.username}</td>}
             <td>
