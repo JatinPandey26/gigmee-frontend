@@ -17,75 +17,80 @@
             color: gray;
         }
 
-        .menu{
+        .menu {
             font-size: 0.9rem;
             color: gray;
             display: flex;
             gap: 1rem;
-           justify-content: space-between;
-           @media screen and (max-width:800px) {
+            justify-content: space-between;
+
+            @media screen and (max-width:800px) {
                 flex-direction: column;
-           }
-            .budget{
+            }
+
+            .budget {
                 width: 50%;
                 display: flex;
                 align-items: center;
                 gap: 1rem;
 
-                input{
+                input {
                     padding: 3px;
                     border: transparent;
-                    border: 1px solid ;
+                    border: 1px solid;
                     border-radius: 3px;
                     border-color: #c2c2c2;
                     outline: none;
+
                     @media screen and (max-width:500px) {
                         width: 6rem;
-                      
-                   }
-                    &:focus{
+
+                    }
+
+                    &:focus {
                         border: 2px solid;
                     }
                 }
 
-                button{
-                   background-color: #80679e; 
-                   color: white;
-                   border : transparent;
-                   padding: 5px 8px;
-                   border-radius: 3px;
+                button {
+                    background-color: #80679e;
+                    color: white;
+                    border: transparent;
+                    padding: 5px 8px;
+                    border-radius: 3px;
                 }
             }
 
-            .sort{
+            .sort {
                 display: flex;
                 align-items: center;
                 gap: 10px;
                 position: relative;
-                
-                span{
+
+                span {
                     font-size: 0.9rem;
 
-                    &:nth-of-type(2){
-                        color : black;
+                    &:nth-of-type(2) {
+                        color: black;
                         font-weight: 700;
                     }
                 }
 
-                img{
+                img {
                     height: 100%;
                     width: 16px;
                     object-fit: contain;
-                    &:hover{
+
+                    &:hover {
                         border: 1px solid gray;
                     }
                 }
 
-                .options{
-                    border: 1px solid rgb(187, 187, 187); 
+                .options {
+                    border: 1px solid rgb(187, 187, 187);
                     padding: 10px;
                     position: absolute;
-                    bottom:-2.3rem;
+                    bottom: -2.3rem;
                     right: 0;
                     border-radius: 3px;
                     background-color: white;
@@ -93,9 +98,9 @@
                 }
             }
         }
-        .cards{
+
+        .cards {
             display: flex;
-            justify-content: space-between;
             flex-wrap: wrap;
         }
     }
