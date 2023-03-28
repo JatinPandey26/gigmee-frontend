@@ -67,7 +67,7 @@ function App() {
         },
         {
           path: '/mygigs',
-          element: <MyGigs />
+          element: <MyGigs /> 
         },
         {
           path: '/add',
