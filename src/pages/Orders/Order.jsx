@@ -1,5 +1,6 @@
-import { useQuery } from '@tanstack/react-query';
+import { useMutation, useQuery } from '@tanstack/react-query';
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import { getCurrentUser } from '../../utils/getCurrentUser';
 import newRequest from '../../utils/newRequest';
 import './Order.scss'
@@ -14,7 +15,20 @@ const Order = ({ order }) => {
             return newRequest.get(`/users/${currentUser.isSeller ? order.buyerId : order.sellerId}`).then(res => { return res.data })
         }
     });
+    const navigate = useNavigate()
+    const mutation = useMutation({
+        mutationFn: (id) => {
+            newRequest.post('/conversations', { to: id }, { withCredentials: true });
+        }
+        ,
+        onSuccess: () => {
+            navigate('/messages')
+        }
+    })
 
+    const createConversation = () => {
+        mutation.mutate(order.sellerId)
+    }
 
 
     return (
@@ -26,7 +40,7 @@ const Order = ({ order }) => {
             <td>{order.price}</td>
             {isLoading ? "Loading..." : <td>{data.username}</td>}
             <td>
-                <img src="/assets/Images/message.png" alt="" />
+                <img onClick={createConversation} src="/assets/Images/message.png" alt="" />
             </td>
         </tr>
     )
