@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import newRequest from '../../utils/newRequest';
 import './Navbar.scss'
+import { SwiperSlider } from '../Slides/Slide';
+import { SwiperSlide, Swiper } from 'swiper/react';
+
 
 const Navbar = () => {
 
@@ -52,7 +55,7 @@ const Navbar = () => {
                 </button>
                 <div className={navbarOpen ? 'menu open' : 'menu'}>
                     <span>Buisness</span>
-                    <span><Link className='link' to='/gigs'>Explore</Link></span>
+                    <span><Link className='link exploreTab' to='/gigs'>Explore</Link></span>
                     <span>English</span>
                     {!currentUser?.isSeller && <span>Become a seller</span>}
                     {!currentUser && <Link to='/login' className='link'><span>Sign in</span></Link>}
@@ -83,12 +86,40 @@ const Navbar = () => {
                 lowerMenuActive && (<>
                     <div className="lower-menu-wrapper">
                         <div className='lower-menu'>
-                            <Link to='/' className='link'><span>Graphics & Design</span></Link>
-                            <Link to='/' className='link'><span>Video Animnaion</span></Link>
-                            <Link to='/' className='link'><span>AI Services</span></Link>
-                            <Link to='/' className='link'><span>Digital Marketing</span></Link>
-                            <Link to='/' className='link'><span>Music & Video</span></Link>
-                            <Link to='/' className='link'><span>Web Development</span></Link>
+                            <Swiper
+                                style={{ zIndex: 10 }}
+                                slidesPerView={6}
+                                breakpoints={{
+                                    0: {
+                                        slidesPerView: 1,
+                                    },
+                                    400: {
+                                        slidesPerView: 2,
+                                    },
+                                    639: {
+                                        slidesPerView: 3,
+                                    },
+                                    865: {
+                                        slidesPerView: 4
+                                    },
+                                    1000: {
+                                        slidesPerView: 5
+                                    },
+                                    1500: {
+                                        slidesPerView: 6
+                                    },
+                                    1700: {
+                                        slidesPerView: 7
+                                    }
+                                }}
+                            >
+                                <SwiperSlide><Link to='/' className='link'><span>Graphics & Design</span></Link></SwiperSlide>
+                                <SwiperSlide><Link to='/' className='link'><span>Video Animnaion</span></Link></SwiperSlide>
+                                <SwiperSlide><Link to='/' className='link'><span>AI Services</span></Link></SwiperSlide>
+                                <SwiperSlide><Link to='/' className='link'><span>Digital Marketing</span></Link></SwiperSlide>
+                                <SwiperSlide><Link to='/' className='link'><span>Music & Video</span></Link></SwiperSlide>
+                                <SwiperSlide><Link to='/' className='link'><span>Web Development</span></Link></SwiperSlide>
+                            </Swiper>
                         </div>
                     </div></>)
 

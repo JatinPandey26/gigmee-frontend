@@ -1,6 +1,6 @@
 import React from 'react'
 import Featured from '../../Components/Featured/Featured'
-import Slide from '../../Components/Slides/Slide'
+import Slide, { SwiperSlider } from '../../Components/Slides/Slide'
 import TrustedBy from '../../Components/TrustedBy/TrustedBy'
 import './Home.scss'
 import { cards, gigs, projects } from '../../data'
@@ -9,27 +9,30 @@ import Buisness from '../../Components/Buisness/Buisness'
 import ProjectCard from '../../Components/ProjectCard/ProjectCard'
 import Card from '../../Components/CategoryCards/Card'
 import GigCard from '../../Components/GigCard/GigCard'
+import { SwiperSlide } from 'swiper/react'
 const Home = () => {
   return (
     <div className='home'>
       <Featured />
       <TrustedBy />
-      <Slide slidesToShow={5} arrowsScroll={2} >
+      <SwiperSlider>
         {
           cards.map((item, index) => {
-            return <Card key={index} item={item} />
+            return <SwiperSlide> <Card key={index} item={item} /></SwiperSlide>
           })
         }
-      </Slide>
-  
+      </SwiperSlider>
+    
+
       <Features />
-      <Slide slidesToShow={4} arrowsScroll={2} >
+      <SwiperSlider>
         {
           projects.map((item, index) => {
-            return <ProjectCard key={index} item={item} />
+            return <SwiperSlide><ProjectCard key={index} item={item} /></SwiperSlide>
           })
         }
-      </Slide>
+      </SwiperSlider>
+     
       <Buisness />
 
     </div>
